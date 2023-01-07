@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles/style.css" rel="stylesheet">
+    <link href="/styles/fonts.css" rel="stylesheet">
+    <link href="/styles/media.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./components/favicon.ico">
+
+
+    <title>HUBLAB</title>
+</head>
+<body>
+    <header>
+        <div id="title">
+            <h1>HUBLAB<h1>
+            <h1>mentorando startups<h1>
+        </div>
+        <ul>
+            <a href="#"><li>Início</li></a>
+            <a href="#"><li>Serviços</li></a>
+            <a href="#"><li>Sobre</li></a>
+            <a href="#"><li>Contatos</li></a>
+            <a href="#" id="inscreva-se-btn"><li>Já tem uma conta?</li></a>
+         </ul>   
+    </header>
+
+    <main>
+        <aside>
+            <h2><span>Registre-se agora</span></h2>
+            <h2>Na HUBLAB</h2>
+            <p>Para apoiar a jornada de crescimento sustentável das Startups,
+                por meio de mentorias de alta performance, 
+                focadas em acelerar a captação de investimentos e 
+                atingir a excelência em governança corporativa</p>
+                <div>
+                    <h1>Informações da empresa:</h1>
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <input type="submit" class="btn btn-success" value="Salvar">
+                    </form>
+                </div>
+</script>
+</html>
